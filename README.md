@@ -67,10 +67,24 @@ In terms of access, we will use the URL of the **Dataset link** to save the same
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
-### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+AutoMLConfig Class represents configuration for submitting an automated ML experiment in Azure Machine Learning. This configuration object contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time. In this experiment we used the following configuration:
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![image](https://user-images.githubusercontent.com/38326274/140656086-f2c7722c-639c-4369-acdc-d1d3bd0d172f.png)
+
+Following are some key conifgs for this run. The taks that needs to be performed is set as classification with the dataset being passed to the training data. The column that needs to be trated as a target variable is mentioned as "Y". In this taks we have also enable early stopping (enabling the early termination, the run terminates if the score is not improving in the short term). Finally we also set a log file to log all the errors that might occur during the run, so that we can use them to debug, in case required.
+
+
+### Results
+The best AutoML model obtained an accuracy of 77% (Voting Ensemble), but considering that it is based on a software decision and the Best Hyperdrive model obtained an accuracy of approx. 67%, we can assume that the AutoML model has a higher grade result. Parameters for the modelling are the same attributes that were provided in the dataset. In terms of improving the model, we can think of more feature engineering like creation of more meaningful features, or feature reduction due to high correlation. In cases of classification, we understand that it is not only accuracy that determines the goodness of the model and we could have looked into the F1-score or Precision or recall depending on the need of the problem statement.
+
+- **Screenshot 1:** RunDetails Widget 
+![image](https://user-images.githubusercontent.com/38326274/140656459-df45e0bd-d6e3-40dd-824a-f580bac3128f.png)
+
+- **Screenshot 2:** Best Run details
+![image](https://user-images.githubusercontent.com/38326274/140656526-41d57652-2542-466b-9660-71469770c4db.png)
+******************************************************************************************************************************************************************
+![image](https://user-images.githubusercontent.com/38326274/140656577-00fbbd9d-8233-449a-9dc3-cfe18d47a159.png)
+
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
