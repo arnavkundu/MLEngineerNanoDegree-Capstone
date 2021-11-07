@@ -1,8 +1,8 @@
 *NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
+# In-Vehicle Coupon Recommendation Data Set
 
-*TODO:* Write a short introduction to your project.
+This data set was collected via a survey on Amazon Mechanical Turk and describes different driving scenarios including the destination, current time, weather, passenger, etc., and then ask the person whether he will accept the coupon if he is the driver. In order to solve the problem statement we will use Azure to configure a cloud-based machine learning production model and deploy it. For performing the development of model, we would use Hyper Drive and Auto ML methods. from both the methodology, the model with higest accuary is retrieved (from AutoML and HyerDrive runs) and deployed in cloud with Azure Container Instances(ACI) as a webservice. Authentication is enabled also by enabling the authentication. Once the model is deployed, the behaviour of the endpoint is analysed by getting a response from the service and logs are retrived at the end.
 
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
