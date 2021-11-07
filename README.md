@@ -59,10 +59,10 @@ This data set is present in the UCI Machine Learning Repository, was collected v
 - **Dataset link:** https://archive.ics.uci.edu/ml/machine-learning-databases/00603/in-vehicle-coupon-recommendation.csv
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+In this project we will try to predict if a set of attributes will encourage an acceptance of coupon if he is a driver. There are different set of attributes, mostly categorical or boolean through which a condition will be set which with either favour acceptance or rejection. For the task of MLOps we will use AutoML and Hyperdrive to understand what model would be able to predict with highest accuracy and finally deploy it for everyone to use. We will also test if with a set of JSON, our prediction is correct or not.
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+In terms of access, we will use the URL of the **Dataset link** to save the same in a tabular web file.
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
