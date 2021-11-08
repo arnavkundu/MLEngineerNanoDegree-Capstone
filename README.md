@@ -134,7 +134,7 @@ Steps taken to query the end point
     *************************************************************************************************************************************************************************
     ![image](https://user-images.githubusercontent.com/38326274/140729633-242c3ba4-1107-4ae7-9302-b7c3b8f68879.png)
 
-##### Hyperdrive Model registration
+    ##### Hyperdrive Model registration
     ![image](https://user-images.githubusercontent.com/38326274/140731710-16fab851-602d-4c35-87c3-e207bcd917bb.png)
 
 
