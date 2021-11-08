@@ -87,8 +87,25 @@ The best AutoML model obtained an accuracy of 77% (Voting Ensemble), but conside
 
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+Automate efficient hyperparameter tuning by using Azure Machine Learning HyperDrive package. In this package we tune hyperparameters with the Azure Machine Learning SDK. For this task we have used Logistic Regression. Logistic regression is applied to predict the categorical dependent variable. In other words, it's used when the prediction is categorical, for example, yes or no, true or false, 0 or 1. Logistic regression is easier to train and implement as compared to other methods and hence was the first choice so Hyperparameter tuning.
 
+## Hyperparmeters
+### Parameters
+- '--C' : choice(0.001,0.01,0.1,1.0,10.0,50.0,100,1000), (Discrete choices: Inverse of regularization strength. Smaller values cause stronger regularization)
+- '--max_iter': choice(10,25) (Discrete choices: Maximum number of iterations to converge)
+
+### Early Termination Policy:
+
+- BanditPolicy
+- slack_factor = 0.1
+- evaluation_interval = 1
+- delay_evaluation = 5
+
+### HyperDrive Configuration
+
+- Primary metric: "Accuracy"
+- Max total runs: 100
+- Max concurrent runs: 5
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
