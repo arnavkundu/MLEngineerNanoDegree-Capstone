@@ -65,7 +65,6 @@ In this project we will try to predict if a set of attributes will encourage an 
 In terms of access, we will use the URL of the **Dataset link** to save the same in a tabular web file.
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
 AutoMLConfig Class represents configuration for submitting an automated ML experiment in Azure Machine Learning. This configuration object contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time. In this experiment we used the following configuration:
 
