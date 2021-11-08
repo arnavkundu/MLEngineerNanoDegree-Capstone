@@ -124,7 +124,7 @@ HyperDrive’s best model accuracy = 66.67%
 Looking at the wide difference in the best model from AutoML and Hyperdrive, it was decided to deploy the AutoML model. To carry on the task, we first register the model. Then the environment along with the inference is created making sure that the conda dependencies is loaded. The score.py file contians the initialization and exit functions for the best model that is deployed. The deployment of model is through **Azure Container instance (ACI)** with configurations: cpu_cores=1, memory_gb=1.
 
 - **Screenshot 5: Model Registration**
-##### AutomML Registration
+##### AutoML Registration
 ![image](https://user-images.githubusercontent.com/38326274/140729723-409adb5c-23b5-452f-afb9-f4ddc7cae760.png)
 *************************************************************************************************************************************************************************
 ![image](https://user-images.githubusercontent.com/38326274/140729633-242c3ba4-1107-4ae7-9302-b7c3b8f68879.png)
@@ -143,10 +143,12 @@ Looking at the wide difference in the best model from AutoML and Hyperdrive, it 
     Transitioning State:
     ![image](https://user-images.githubusercontent.com/38326274/140733114-4dce6cf7-6e9e-4059-8567-cc01c49ec284.png)
 *************************************************************************************************************************************************************************
-    Succes in Notebook:
+    Success in Notebook:
+    
     ![image](https://user-images.githubusercontent.com/38326274/140733566-bf9ec6bd-1226-4c17-896f-9e5956da7cf9.png)
 *************************************************************************************************************************************************************************
     Active State:
+    
     ![image](https://user-images.githubusercontent.com/38326274/140733705-fbe3d51d-7b81-497d-b736-6d69fec2d19d.png)
 
 
