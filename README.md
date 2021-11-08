@@ -13,7 +13,7 @@ This data set is present in the UCI Machine Learning Repository, was collected v
 **Number of Instances:** 12684
 
 **Class:**
-Acceptance feature is used as a class. There are 2 classes in total. These are 0 and 1.
+Acceptance feature is used as a class. There are 2 classes in total. These are 0 and 1. Performing some EDA we see that the target class is a balanced one.
 
 **Attribute Information:**
 
@@ -121,7 +121,20 @@ AutoML’s best model accuracy = 77%
 
 HyperDrive’s best model accuracy = 66.7%
 
-Looking at the wide difference in the best model, it was decided to deploy the AutoML model. To carry on the task, the best model is registered and it's necessary files are downloaded. Then the Environment and inference is created with the help of required conda dependencies and score.py script file which has the intialization and exit function defined for the best model and the model is deployed with ACI(Azure Container Instance) and configurations such as cpu_cores=1, memory_gb=1.
+Looking at the wide difference in the best model from AutoML and Hyperdrive, it was decided to deploy the AutoML model. To carry on the task, we first register the model. Then the environment along with the inference is created making sure that the conda dependencies is loaded. The score.py file contians the initialization and exit functions for the best model that is deployed. The deployment of model is through **Azure Container instance (ACI)** with configurations: cpu_cores=1, memory_gb=1.
+
+- **Screenshot 5: Model Registration**
+
+
+- **Screenshot 6: Model Deployment**
+
+
+- **Screenshot 7: Model Endpoint Active**
+
+
+- **Screenshot 8: Testing the Model Endpoint**
+![image](https://user-images.githubusercontent.com/38326274/140703399-1ae41fc2-b957-4821-8abf-a0df0a8e264b.png)
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
