@@ -74,16 +74,15 @@ Following are some key conifgs for this run. The taks that needs to be performed
 
 
 ### Results
-The best AutoML model obtained an accuracy of 76.97% (Voting Ensemble), but considering that it is based on a software decision and the Best Hyperdrive model obtained an accuracy of approx. 67%, we can assume that the AutoML model has a higher grade result. Parameters for the modelling are the same attributes that were provided in the dataset. In terms of improving the model, we can think of more feature engineering like creation of more meaningful features, or feature reduction due to high correlation. In cases of classification, we understand that it is not only accuracy that determines the goodness of the model and we could have looked into the F1-score or Precision or recall depending on the need of the problem statement.
+The best AutoML model obtained an accuracy of 77.3% (Voting Ensemble), but considering that it is based on a software decision and the Best Hyperdrive model obtained an accuracy of approx. 66.7%, we can assume that the AutoML model has a higher grade result. Parameters for the modelling are the same attributes that were provided in the dataset. In terms of improving the model, we can think of more feature engineering like creation of more meaningful features, or feature reduction due to high correlation. In cases of classification, we understand that it is not only accuracy that determines the goodness of the model and we could have looked into the F1-score or Precision or recall depending on the need of the problem statement.
 
 - **Screenshot 1:** RunDetails Widget 
-![image](https://user-images.githubusercontent.com/38326274/140734384-80bbad47-518b-4916-a920-853388b10b53.png)
+![image](https://user-images.githubusercontent.com/38326274/140769076-a20a10f6-9f16-4882-9f99-b14c6d7284e4.png)
 
 - **Screenshot 2:** Best Run details
-![image](https://user-images.githubusercontent.com/38326274/140734469-ea210f50-4918-4e51-bd16-8b81712a5765.png)
+![image](https://user-images.githubusercontent.com/38326274/140769339-dd99a42a-d264-4783-a6a3-9dd1b60cdf96.png)
 *******************************************************************************************************************************************************************
-![image](https://user-images.githubusercontent.com/38326274/140656577-00fbbd9d-8233-449a-9dc3-cfe18d47a159.png)
-
+![image](https://user-images.githubusercontent.com/38326274/140769453-b66b557e-7916-441a-9833-46b475bb8dd7.png)
 
 ## Hyperparameter Tuning
 Automate efficient hyperparameter tuning by using Azure Machine Learning HyperDrive package. In this package we tune hyperparameters with the Azure Machine Learning SDK. For this task we have used Logistic Regression. Logistic regression is applied to predict the categorical dependent variable. In other words, it's used when the prediction is categorical, for example, yes or no, true or false, 0 or 1. Logistic regression is easier to train and implement as compared to other methods and hence was the first choice so Hyperparameter tuning.
@@ -117,7 +116,7 @@ The best HyperDrive model obtained 66.7% accuracy, trained with logistic regress
 ![image](https://user-images.githubusercontent.com/38326274/140718448-989eb92c-3022-4fa6-9d79-189ee060bb75.png)
 
 ## Model Deployment
-AutoML’s best model accuracy = 76.97%
+AutoML’s best model accuracy = 77.3%
 
 HyperDrive’s best model accuracy = 66.67%
 
@@ -149,7 +148,4 @@ Looking at the wide difference in the best model from AutoML and Hyperdrive, it 
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+![Screen Cast for Capstone Project](https://vimeo.com/643549473)
