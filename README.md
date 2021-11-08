@@ -140,7 +140,7 @@ Looking at the wide difference in the best model from AutoML and Hyperdrive, it 
 
 
 - **Screenshot 7: Model Endpoint Active**
-    Active State:
+
     ![image](https://user-images.githubusercontent.com/38326274/140750052-26cb73b5-0067-4690-8fb4-273eecaa9a19.png)
 
 
