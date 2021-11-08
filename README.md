@@ -123,10 +123,10 @@ HyperDrive’s best model accuracy = 66.67%
 Looking at the wide difference in the best model from AutoML and Hyperdrive, it was decided to deploy the AutoML model. To carry on the task, we first register the model. Then the environment along with the inference is created making sure that the conda dependencies is loaded. The score.py file contians the initialization and exit functions for the best model that is deployed. The deployment of model is through **Azure Container instance (ACI)** with configurations: cpu_cores=1, memory_gb=1.
 
 Steps taken to query the end point
-    - A nested JSON is created. This JSON comprises of all the attributes that are required by the model to finally post a prediction. These attributes are nothing but all         the dependent variables expect the "Y" column. 
-    - The JSON is then passed to the json.dumps() function that converts a Python object into a json string.
-    - We then pass the JSON string to the service instance that was used for model deployment.
-    - Using a POST method, we get the final response by sending the endpoint URI, input data and the headers. 
+- A nested JSON is created. This JSON comprises of all the attributes that are required by the model to finally post a prediction. These attributes are nothing but all         the dependent variables expect the "Y" column. 
+- The JSON is then passed to the json.dumps() function that converts a Python object into a json string.
+- We then pass the JSON string to the service instance that was used for model deployment.
+- Using a POST method, we get the final response by sending the endpoint URI, input data and the headers. 
 
 - **Screenshot 5: Model Registration**
 ##### AutoML Registration
