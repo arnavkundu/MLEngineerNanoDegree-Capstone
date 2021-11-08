@@ -77,12 +77,12 @@ Following are some key conifgs for this run. The taks that needs to be performed
 The best AutoML model obtained an accuracy of 77.3% (Voting Ensemble), but considering that it is based on a software decision and the Best Hyperdrive model obtained an accuracy of approx. 66.7%, we can assume that the AutoML model has a higher grade result. Parameters for the modelling are the same attributes that were provided in the dataset. In terms of improving the model, we can think of more feature engineering like creation of more meaningful features, or feature reduction due to high correlation. In cases of classification, we understand that it is not only accuracy that determines the goodness of the model and we could have looked into the F1-score or Precision or recall depending on the need of the problem statement.
 
 - **Screenshot 1:** RunDetails Widget 
-![image](https://user-images.githubusercontent.com/38326274/140769076-a20a10f6-9f16-4882-9f99-b14c6d7284e4.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140769076-a20a10f6-9f16-4882-9f99-b14c6d7284e4.png)
 
 - **Screenshot 2:** Best Run details
-![image](https://user-images.githubusercontent.com/38326274/140769339-dd99a42a-d264-4783-a6a3-9dd1b60cdf96.png)
-*******************************************************************************************************************************************************************
-![image](https://user-images.githubusercontent.com/38326274/140769453-b66b557e-7916-441a-9833-46b475bb8dd7.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140769339-dd99a42a-d264-4783-a6a3-9dd1b60cdf96.png)
+    *******************************************************************************************************************************************************************
+    ![image](https://user-images.githubusercontent.com/38326274/140769453-b66b557e-7916-441a-9833-46b475bb8dd7.png)
 
 ## Hyperparameter Tuning
 Automate efficient hyperparameter tuning by using Azure Machine Learning HyperDrive package. In this package we tune hyperparameters with the Azure Machine Learning SDK. For this task we have used Logistic Regression. Logistic regression is applied to predict the categorical dependent variable. In other words, it's used when the prediction is categorical, for example, yes or no, true or false, 0 or 1. Logistic regression is easier to train and implement as compared to other methods and hence was the first choice so Hyperparameter tuning.
@@ -109,11 +109,11 @@ Automate efficient hyperparameter tuning by using Azure Machine Learning HyperDr
 The best HyperDrive model obtained 66.7% accuracy, trained with logistic regression, Regularization Strength = 100 and maximum iterations = 10. Inspiration from the 77% accuracy of the AutoML model and looking at the type of variables in the dataset (Mostly categorical), the Hyperdrive model could be improved by choosing a more robust algorithm, such as Random Forest Classifier (For Example CatBoost) or Voting Esemble Classifier (As inspired from AutoML run).
 
 - **Screenshot 3:**: Rundetails Widget for Hyperdrive
-![image](https://user-images.githubusercontent.com/38326274/140718297-aac6f3aa-f2c9-44b2-ba61-fa80d19b63c4.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140718297-aac6f3aa-f2c9-44b2-ba61-fa80d19b63c4.png)
 
 
 - **Screenshot 4:**: Best Model
-![image](https://user-images.githubusercontent.com/38326274/140718448-989eb92c-3022-4fa6-9d79-189ee060bb75.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140718448-989eb92c-3022-4fa6-9d79-189ee060bb75.png)
 
 ## Model Deployment
 AutoML’s best model accuracy = 77.3%
@@ -123,25 +123,25 @@ HyperDrive’s best model accuracy = 66.67%
 Looking at the wide difference in the best model from AutoML and Hyperdrive, it was decided to deploy the AutoML model. To carry on the task, we first register the model. Then the environment along with the inference is created making sure that the conda dependencies is loaded. The score.py file contians the initialization and exit functions for the best model that is deployed. The deployment of model is through **Azure Container instance (ACI)** with configurations: cpu_cores=1, memory_gb=1.
 
 Steps taken to query the end point
-- A nested JSON is created. This JSON comprises of all the attributes that are required by the model to finally post a prediction. These attributes are nothing but all         the dependent variables expect the "Y" column. 
-- The JSON is then passed to the json.dumps() function that converts a Python object into a json string.
-- We then pass the JSON string to the service instance that was used for model deployment.
-- Using a POST method, we get the final response by sending the endpoint URI, input data and the headers. 
+1. A nested JSON is created. This JSON comprises of all the attributes that are required by the model to finally post a prediction. These attributes are nothing but all         the dependent variables expect the "Y" column. 
+2. The JSON is then passed to the json.dumps() function that converts a Python object into a json string.
+3. We then pass the JSON string to the service instance that was used for model deployment.
+4. Using a POST method, we get the final response by sending the endpoint URI, input data and the headers. 
 
 - **Screenshot 5: Model Registration**
-##### AutoML Registration
-![image](https://user-images.githubusercontent.com/38326274/140729723-409adb5c-23b5-452f-afb9-f4ddc7cae760.png)
-*************************************************************************************************************************************************************************
-![image](https://user-images.githubusercontent.com/38326274/140729633-242c3ba4-1107-4ae7-9302-b7c3b8f68879.png)
+    ##### AutoML Registration
+    ![image](https://user-images.githubusercontent.com/38326274/140729723-409adb5c-23b5-452f-afb9-f4ddc7cae760.png)
+    *************************************************************************************************************************************************************************
+    ![image](https://user-images.githubusercontent.com/38326274/140729633-242c3ba4-1107-4ae7-9302-b7c3b8f68879.png)
 
 ##### Hyperdrive Model registration
-![image](https://user-images.githubusercontent.com/38326274/140731710-16fab851-602d-4c35-87c3-e207bcd917bb.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140731710-16fab851-602d-4c35-87c3-e207bcd917bb.png)
 
 
 - **Screenshot 6: Model Deployment**
-![image](https://user-images.githubusercontent.com/38326274/140730102-3cf8eef0-f832-4582-b7de-168a18f0e998.png)
-*************************************************************************************************************************************************************************
-![image](https://user-images.githubusercontent.com/38326274/140729945-b43a3962-095c-4f5d-838f-b4e9068da1dd.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140730102-3cf8eef0-f832-4582-b7de-168a18f0e998.png)
+    *************************************************************************************************************************************************************************
+    ![image](https://user-images.githubusercontent.com/38326274/140729945-b43a3962-095c-4f5d-838f-b4e9068da1dd.png)
 
 
 - **Screenshot 7: Model Endpoint Active**
@@ -150,7 +150,7 @@ Steps taken to query the end point
 
 
 - **Screenshot 8: Testing the Model Endpoint**
-![image](https://user-images.githubusercontent.com/38326274/140703399-1ae41fc2-b957-4821-8abf-a0df0a8e264b.png)
+    ![image](https://user-images.githubusercontent.com/38326274/140703399-1ae41fc2-b957-4821-8abf-a0df0a8e264b.png)
 
 
 ## Screen Recording
