@@ -108,12 +108,20 @@ Automate efficient hyperparameter tuning by using Azure Machine Learning HyperDr
 - Max concurrent runs: 5
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+The best HyperDrive model obtained 66.7% accuracy, trained with logistic regression, Regularization Strength = 100 and maximum iterations = 10. Inspiration from the 77% accuracy of the AutoML model and looking at the type of variables in the dataset (Mostly categorical), the Hyperdrive model could be improved by choosing a more robust algorithm, such as Random Forest Classifier (For Example CatBoost) or Voting Esemble Classifier (As inspired from AutoML run).
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+- **Screenshot 3:**: Rundetails Widget for Hyperdrive
+
+
+- **Screenshot 4:**: Best Model
+![image](https://user-images.githubusercontent.com/38326274/140700728-67290694-7961-4c22-8422-e9ceaf0826ee.png)
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+AutoML’s best model accuracy = 77%
+
+HyperDrive’s best model accuracy = 66.7%
+
+Looking at the wide difference in the best model, it was decided to deploy the AutoML model. To carry on the task, the best model is registered and it's necessary files are downloaded. Then the Environment and inference is created with the help of required conda dependencies and score.py script file which has the intialization and exit function defined for the best model and the model is deployed with ACI(Azure Container Instance) and configurations such as cpu_cores=1, memory_gb=1.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
