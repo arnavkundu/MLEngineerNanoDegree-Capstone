@@ -143,13 +143,13 @@ Looking at the wide difference in the best model from AutoML and Hyperdrive, it 
     Transitioning State:
     ![image](https://user-images.githubusercontent.com/38326274/140733114-4dce6cf7-6e9e-4059-8567-cc01c49ec284.png)
 *************************************************************************************************************************************************************************
-    Success in Notebook:
     
-    ![image](https://user-images.githubusercontent.com/38326274/140733566-bf9ec6bd-1226-4c17-896f-9e5956da7cf9.png)
+    Success in Notebook:    
+    ![image](https://user-images.githubusercontent.com/38326274/140749990-5b849ef3-3bfa-4214-a0ed-5aedfd07f321.png)
 *************************************************************************************************************************************************************************
-    Active State:
     
-    ![image](https://user-images.githubusercontent.com/38326274/140733705-fbe3d51d-7b81-497d-b736-6d69fec2d19d.png)
+    Active State:
+    ![image](https://user-images.githubusercontent.com/38326274/140750052-26cb73b5-0067-4690-8fb4-273eecaa9a19.png)
 
 
 - **Screenshot 8: Testing the Model Endpoint**
