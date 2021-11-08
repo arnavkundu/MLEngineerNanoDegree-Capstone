@@ -77,10 +77,10 @@ Following are some key conifgs for this run. The taks that needs to be performed
 The best AutoML model obtained an accuracy of 76.97% (Voting Ensemble), but considering that it is based on a software decision and the Best Hyperdrive model obtained an accuracy of approx. 67%, we can assume that the AutoML model has a higher grade result. Parameters for the modelling are the same attributes that were provided in the dataset. In terms of improving the model, we can think of more feature engineering like creation of more meaningful features, or feature reduction due to high correlation. In cases of classification, we understand that it is not only accuracy that determines the goodness of the model and we could have looked into the F1-score or Precision or recall depending on the need of the problem statement.
 
 - **Screenshot 1:** RunDetails Widget 
-![image](https://user-images.githubusercontent.com/38326274/140656459-df45e0bd-d6e3-40dd-824a-f580bac3128f.png)
+![image](https://user-images.githubusercontent.com/38326274/140734384-80bbad47-518b-4916-a920-853388b10b53.png)
 
 - **Screenshot 2:** Best Run details
-![image](https://user-images.githubusercontent.com/38326274/140656526-41d57652-2542-466b-9660-71469770c4db.png)
+![image](https://user-images.githubusercontent.com/38326274/140734469-ea210f50-4918-4e51-bd16-8b81712a5765.png)
 *******************************************************************************************************************************************************************
 ![image](https://user-images.githubusercontent.com/38326274/140656577-00fbbd9d-8233-449a-9dc3-cfe18d47a159.png)
 
